@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Easy Travel</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav id="navbar-nav" class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+				<Span class="navbar-toggler-icon"></Span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<p class="nav-link"></p>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./contact.html">Contact</a>
+					</li>
+					<li class="nav-item">
+						<div class="dropdown">
+							<button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton"
+								data-toggle="dropdown" aria-haspopup="true"
+								style="border-radius: 12px">Currency</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a href="#" class="dropdown-item">CAD</a>
+								<a href="#" class="dropdown-item">USD</a>
+
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</nav>
+
+
+
+
+
+	<!--Search Box-->
+	<div class="banner">
+		<div class="row">
+			<div class="col-md-6 col-xs-12 col-sm-12" style="margin-top: 66px;
+			margin-left: 46px;">
+				<div class="container search-box text-center">
+					<div class="col-md-12 tab-wrap">
+						<div class="tab-content p-4 " style="margin-top: auto" id="v-pills-tabContent">
+							<div class="tab-pane fade show active" id="v-pills-1" role="tabpanel"
+								aria-labelledby="v-pills-nextgen-tab">
+								<form action="./contact.html" class="search-destination">
+
+									<div class="row">
+										<div class="col-md align-items-end">
+											<div class="form-group">
+												<label for="#">From</label>
+												<div class="form-field">
+													<div class="icon"><span class="icon-my_location"></span>
+													</div>
+													<input type="text" class="form-control" placeholder="From">
+												</div>
+											</div>
+										</div>
+										<div class="col-md align-items-end">
+											<div class="form-group">
+												<label for="#">Where</label>
+												<div class="form-field">
+													<div class="icon"><span class="icon-map-marker"></span>
+													</div>
+													<input type="text" class="form-control" placeholder="Where">
+												</div>
+											</div>
+										</div>
+										<div class="col-md align-items-end">
+											<div class="form-group">
+												<label for="#">Departure</label>
+												<div class="form-field">
+													<div class="icon"><span class="icon-map-marker"></span>
+													</div>
+													<input type="text" class="form-control checkin_date"
+														placeholder="Check In">
+												</div>
+											</div>
+										</div>
+										<div class="col-md align-items-end">
+											<div class="form-group">
+												<label for="#">Returning Flight</label>
+												<div class="form-field">
+													<div class="icon"><span class="icon-map-marker"></span></div>
+													<input type="text" class="form-control checkout_date"
+														placeholder="From">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+
+										<div class="col-md align-items-end">
+											<div class="form-group">
+												<label for="#">Travelers</label>
+												<div class="form-field">
+													<div class="select-wrap">
+														<div class="icon"><span class="ion-ios-arrow-down"></span></div>
+														<select name="" id="" class="form-control">
+															<option value="">1</option>
+															<option value="">2</option>
+															<option value="">3</option>
+															<option value="">4</option>
+															<option value="">5</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md align-items-end">
+											<div class="form-group">
+												<label for="#">Email</label>
+												<div class="form-field">
+													<div class="icon"><span class="icon-envelope"></span>
+													</div>
+													<input type="email" class="form-control" placeholder="Email">
+												</div>
+											</div>
+										</div>
+										<div class="col-md align-items-end">
+											<div class="form-group">
+												<label for="#">Phone</label>
+												<div class="form-field">
+													<div class="icon"><span class="icon-phone"></span>
+													</div>
+													<input type="number" class="form-control phone" placeholder="Phone">
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md align-self-end">
+											<div class="form-group">
+												<div class="form-field">
+													<input type="submit" value="Search"
+														class="form-control btn btn-primary">
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+
+
+								</form>
+							</div>
+						</div>
+					</div>
+
+
+
+				</div>
+			</div>
+			<div class="col-4" style="margin-right: 170px">
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+
+	<!--- Three Column Section -->
+	<div class="container-fluid" style="margin-top: 0px;
+    padding-top: 15px;    background-color: #dddddd;">
+		<div class="row text-center  my-5">
+			<div class="col-xs-12  col-sn-6 col-md-4">
+
+				<h3>Easy Booking</h3>
+				<p>We help you bla bla bla</p>
+			</div>
+			<div class="col-xs-12 col-sn-6 col-md-4">
+
+				<h3>Price Gurantee</h3>
+				<p>We help you bla bla bla</p>
+			</div>
+			<div class="col-xs-12 col-md-4">
+
+				<h3>24/7 Customer care</h3>
+				<p>We help you bla bla bla</p>
+			</div>
+
+		</div>
+		<hr class="my-2">
+	</div>
+
+	<div class="container">
+		<div class="row text-center padding">
+			<div class="col-12">
+				<h2>About Us</h2>
+			</div>
+			<div class="col-12">
+				<p>Over many years of experience and deep understanding of airlines ticketing <strong> system, it gives
+						us
+						immense pleasure to introduce our company Easy Air Travel and Tours Inc registered and located
+						in
+						Calgary, Canada.</strong> It provides the highest quality travel and tour packages, hotel
+					reservations and
+					flight ticketing in Canada and beyond.</p>
+
+				<p>
+					Easy air travel and tours compares more than 1200 flights from leading flight ticket consolidators
+					and provides you the best and discounted fares offered through our consolidator network. We will try
+					to beat any legitimate airlines fares available online. Besides that, we will also help you to find
+					the ideal flight to <strong>Nepal.</strong> </p>
+
+				<p>
+					Easy air travels and tours has experienced and friendly staff and responsible management team. They
+					provide you the airline’s ticket with competitive rates and make sure that your trip is perfect and
+					stress-free. Our aim is to offer 100% customer satisfaction.</p>
+
+				<p>
+					Book your flights and vacation packages with <strong> Easy Air Travel and Tours,</strong> today.
+					Lowest Airfare Price
+					Guarantee!</p>
+
+				<p>
+					If you have any questions, concerns, or would like to book flight tickets, hotel rooms or trip
+					packages, please contact us today. We appreciate your business and look forward to providing you the
+					best possible airlines fares, hotels, and tour packages.</p>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Footer -->
+	<footer class="page-footer font-small  ">
+
+		<!-- Footer Links -->
+		<div class="container text-center text-md-left">
+
+			<!-- Grid row -->
+			<div class="row">
+
+				<!-- Grid column -->
+				<div class="col-8">
+					<ul class="py-3">
+						<li class="px-4">
+							<a href="./index.html">Home</a>
+						</li>
+						<li class="px-4">
+							<a href="./privacy.html"> Privacy policy</a>
+						</li>
+						<li class="px-4">
+							<a href="#">Terms and conditions</a>
+						</li>
+						<li class="px-4">
+							<a href="./contact.html"> Support</a>
+						</li>
+					</ul>
+					<div class="row container ml-4">
+						<p style="margin-right: 100px">Easy Air Travel and Tours is a family owned and operated travel
+							agency located in Calgary. We
+							have
+							been serving the Canadian travel industry since 2017.</p>
+					</div>
+
+
+				</div>
+				<!-- Grid column -->
+
+				<hr class="clearfix w-100 d-md-none pb-3">
+
+
+
+				<!-- Grid column -->
+				<div class="col-4 mb-md-0 mb-3">
+					<div class="row">
+						<div class="card text-white  bg-info mb-3" style="max-width: 20rem;">
+							<div class="card-header text-center">Support</div>
+							<div class="card-body">
+
+								<p class="card-text">
+									<i class="fas fa-phone"></i>
+									<span class="ml-2">
+										+1 403-585-6641
+									</span>
+								</p>
+								<p class="card-text">
+									<i class="fas fa-envelope"></i>
+									<span class="ml-2">
+										bookings@easyairtravels.com
+									</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<img src="./img/35-351793_credit-or-debit-card-mastercard-logo-visa-card.png" alt="mstercards"
+							style="width: 100px;
+							height: auto;">
+					</div>
+
+
+				</div>
+				<!-- Grid column -->
+
+			</div>
+			<!-- Grid row -->
+
+
+
+		</div>
+		<!-- Footer Links -->
+	</footer>
+
+	<!-- Copyright -->
+	<div class="footer-copyright container-fluid fixed text-center py-3" style="background-color: black">
+		<p style="color:white">Under constuction
+			<i class="far fa-heart"></i>
+		</p>
+	</div>
+	<!-- Copyright -->
+
+
+	<!-- Footer -->
+
+
+</body>
+
+</html>
