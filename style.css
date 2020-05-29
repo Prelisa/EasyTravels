@@ -4,6 +4,7 @@
 @media (max-width: 992px) {
 }
 @media (max-width: 768px) {
+
 }
 @media (max-width: 576px) {
 }
@@ -68,10 +69,56 @@ a {
 .banner .col-4 {
   padding-top: 80px;
 }
-
-.search-box {
-  background-color: #d5d5d5;
+.form-group{
+  display: inline
 }
+.form-control{
+  display:inline;
+}
+.row-sec{
+  margin-top:-48px;
+}
+.flight-btn {
+  width: 27%;
+  margin-left: 0.5%;
+  height: 50px;
+}
+.form-margin {
+  margin-left: 50%;
+}
+.departure-margin {
+  margin-left: 100%;
+}
+.field-form {
+  width: 150%;
+}
+.field-form-where {
+  margin-left: 50%;
+}
+.email-section {
+  margin-left: -65%;
+}
+.phone-section {
+  margin-left: -15%;
+}
+.search-content {
+  width: 116%;
+  height: 49px;
+  margin-left: -15%;
+}
+
+
+.datepicker td, .datepicker th {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 0.7rem;
+}
+
+.datepicker {
+  margin-bottom: 3rem;
+}
+
+
 .social a {
   font-size: 4.5em;
   padding: 3rem;
@@ -81,6 +128,9 @@ a {
 }
 .fa-facebook:hover {
   color: #d5d5d5;
+}
+.round-one {
+  float: left;
 }
 
 footer {
@@ -128,7 +178,7 @@ hr.light {
   overflow: hidden;
 }
 
-.funkyradio label{
+.funkyradio label {
   border-radius: 3px;
   border: 1px solid #d1d3d4;
   font-weight: normal;

@@ -5,22 +5,20 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Easy Travel</title>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<link rel="stylesheet" href="./bootstrap-datepicker.css">
 
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<link href="style.css" rel="stylesheet">
 </head>
 
 <body>
-
 	<!-- Navigation -->
 	<nav id="navbar-nav" class="navbar navbar-expand-md navbar-light bg-light sticky-top">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#"><img src="img/logo.png"
-					style="width: 9rem;height: auto;margin-left: 49px;"></a>
+			<a class="navbar-brand" href="#"><img src="img/EASY-RED.png"
+					style="width: 10rem;height: auto;margin-left: 49px;"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 				<Span class="navbar-toggler-icon"></Span>
 			</button>
@@ -63,76 +61,87 @@
 
 	<!--Search Box-->
 	<div class="banner">
-		<div class="row" style="margin-left: 15%">
-			<div class="col-md-6 col-xs-12 col-sm-12" style="margin-top: 66px;
-			margin-left: 46px;">
-				<span style="background-color: black;
-				display: inherit;
-				color: white;
-				text-align: center;">
-					FLIGHT
-				</span>
-				<div class="container search-box text-center" style="background-color: rgba(104, 110, 110, 0.39)">
-					<div class="col-md-12 tab-wrap">
+
+		<div class="row pt-5">
+			<div class="col-md-8 offset-md-1 col-sm-12 col-xs-12">
+				<nav class="nav nav-pills nav-justified">
+					<a href="#" class="nav-link active bg-secondary flight-btn">Flight</a>
+				</nav>
+				<div class="container container-sm container-sm ml-2 text-md-left"
+					style="background-color: rgba(104, 110, 110, 0.39)">
+					<div class="round-one row ml-2">
 						<span class=" funkyradio funkyradio-success">
 							<input type="radio" name="radio" id="radio1" />
-							<label for="radio1">Round Trip </label>
+							<label class="pr-3" for="radio1">Round Trip </label>
 						</span>
-						<span class="funkyradio funkyradio-success">
+						<span class="funkyradio funkyradio-success ml-1">
 							<input type="radio" name="radio" id="radio2" checked />
-							<label for="radio2">One way</label>
+							<label class="pr-3" for="radio2">One way</label>
 						</span>
-						<div class="tab-content p-4 " style="margin-top: auto" id="v-pills-tabContent">
+					</div>
+					<div class="col-md-12 col-xs-12 col-sm-12 mt-3 pt-0 pl-0 row">
+						<div class="tab-content" id="v-pills-tabContent">
 							<div class="tab-pane fade show active" id="v-pills-1" role="tabpanel"
 								aria-labelledby="v-pills-nextgen-tab">
 
-								<form action="./contact.html" class="search-destination">
+								<form name="myform" action="booking.php"
+									class="search-destination ml-3 form-horizontal" onsubmit="return validateemail()">
 
-									<div class="row">
-										<div class="col-md align-items-end">
+									<div class=" row mb-0 pb-0">
+										<div class="col-md align-items-end pb-0">
 											<div class="form-group">
-												<label for="#">From</label>
+
+												<span>
+													<label class="ml-1" for="#">From</label>
+												</span>
 												<div class="form-field">
-													<div class="icon"><span class="icon-my_location"></span>
-													</div>
-													<input type="text" class="form-control" placeholder="From">
-												</div>
-											</div>
-										</div>
-										<div class="col-md align-items-end">
-											<div class="form-group">
-												<label for="#">Where</label>
-												<div class="form-field">
-													<div class="icon"><span class="icon-map-marker"></span>
-													</div>
-													<input type="text" class="form-control" placeholder="Where">
-												</div>
-											</div>
-										</div>
-										<div class="col-md align-items-end">
-											<div class="form-group">
-												<label for="#">Departure</label>
-												<div class="form-field">
-													<div class="icon"><span class="icon-map-marker"></span>
-													</div>
-													<input type="text" class="form-control checkin_date"
-														placeholder="Check In">
-												</div>
-											</div>
-										</div>
-										<div class="col-md align-items-end">
-											<div class="form-group">
-												<label for="#">Returning Flight</label>
-												<div class="form-field">
-													<div class="icon"><span class="icon-map-marker"></span></div>
-													<input type="text" class="form-control checkout_date"
+													<input type="text" name="from" class="form-control field-form"
 														placeholder="From">
+												</div>
+
+											</div>
+										</div>
+
+										<div class="col-md align-items-end">
+											<div class="form-group">
+
+
+												<span>
+													<label class="field-form-where" for="#">Where</label>
+
+												</span>
+												<div class="form-field">
+													<div class="icon"><span class="icon-map-marker"></span>
+													</div>
+													<input type="text" name="where" class="form-control field-form field-form-where"
+														placeholder="Where">
+												</div>
+											</div>
+										</div>
+										<div class="col-md align-items-end">
+											<div class="form-group">
+												<label class="form-margin departure-margin" for="#">Departure</label>
+												<div class="form-field">
+
+													<input type="text" name="checkin_date"
+														class="form-control datepicker w-50 pl-3 form-margin departure-margin"
+														placeholder="Check-In">
+												</div>
+											</div>
+										</div>
+										<div class="col-md align-items-end">
+											<div class="form-group">
+												<label class="form-margin" for="#">Return</label>
+												<div class="form-field">
+													<input type="text" name="checkout_date"
+														class="form-control datepicker w-50 pl-3 form-margin"
+														placeholder="Check-out">
 												</div>
 											</div>
 										</div>
 									</div>
 
-									<div class="row">
+									<div class="row row-sec">
 
 										<div class="col-md align-items-end">
 											<div class="form-group">
@@ -141,7 +150,7 @@
 													<div class="select-wrap">
 														<div class="icon"><span class="ion-ios-arrow-down"></span>
 														</div>
-														<select name="" id="" class="form-control">
+														<select name="" id="" class="form-control w-25">
 															<option value="">1</option>
 															<option value="">2</option>
 															<option value="">3</option>
@@ -155,21 +164,23 @@
 
 										<div class="col-md align-items-end">
 											<div class="form-group">
-												<label for="#">Email</label>
+												<label class="email-section" for="#">Email</label>
 												<div class="form-field">
-													<div class="icon"><span class="icon-envelope"></span>
-													</div>
-													<input type="email" class="form-control" placeholder="Email">
+													<input type="email" name="email" method="post"
+														class="form-control field-form email-section"
+														placeholder="Email">
 												</div>
 											</div>
 										</div>
 										<div class="col-md align-items-end">
 											<div class="form-group">
-												<label for="#">Phone</label>
+												<label class="phone-section" for="#">Phone</label>
+												<div class="country"></div>
 												<div class="form-field">
 													<div class="icon"><span class="icon-phone"></span>
 													</div>
-													<input type="number" class="form-control phone" placeholder="Phone">
+													<input type="tel" name="phone" class="tel form-control phone-section"
+														placeholder="Phone" pattern="\d*" x-autocompletetype="tel">
 												</div>
 											</div>
 										</div>
@@ -177,8 +188,8 @@
 										<div class="col-md align-self-end">
 											<div class="form-group">
 												<div class="form-field">
-													<input type="submit" value="Search"
-														class="form-control btn btn-primary">
+													<input type="submit"  value="Search"
+														class="form-control btn btn-primary search-content">
 												</div>
 											</div>
 										</div>
@@ -196,43 +207,45 @@
 
 				</div>
 			</div>
-			<div class="col-4" style="margin-right: 170px">
-				<img src="./img/Chalkboard Quote Vintage Classroom Poster.png" style="width: 57%" alt="">
+			<div class="col-md-2 d-none d-sm-block">
+				<img src="./img/Chalkboard Quote Vintage Classroom Poster.png" class="img-fluid" alt="">
 			</div>
 
 		</div>
-
-
 	</div>
 
 
 
+
+
+
 	<!--- Three Column Section -->
-	<div class="container-fluid" style="margin-top: 0px;
-    padding-top: 15px;    background-color: #dddddd;">
-		<div class="row text-center  my-5">
-			<div class="col-xs-12  col-sn-6 col-md-4">
-				<img src="./img/easy booking.svg" style="width: 13%" alt="easyairtravels">
-				<br>
-				<span>
-					<h3>Easy Booking</h3>
-				</span>
+	<div class="mt-0 pt-3" style="background-color: #dddddd;">
+		<div class="container">
+			<div class="row text-center  my-5">
+				<div class="col-xs-12  col-sn-6 col-md-4">
+					<img src="./img/easy booking.svg" style="width: 13%" alt="easyairtravels">
+					<br>
+					<span>
+						<h3>Easy Booking</h3>
+					</span>
 
-				<p>Find best holiday destination</p>
-			</div>
-			<div class="col-xs-12 col-sn-6 col-md-4">
-				<img src="./img/24-hours.svg" style="width: 14%" alt="">
-				<br>
-				<h3>Price Gurantee</h3>
-				<p>Best price deal with us</p>
-			</div>
-			<div class="col-xs-12 col-md-4">
-				<img src="./img/wallet.svg" style="width: 13%" alt="">
-				<br>
-				<h3>24/7 Customer care</h3>
-				<p>24x7 support service provider</p>
-			</div>
+					<p>Find best holiday destination</p>
+				</div>
+				<div class="col-xs-12 col-sn-6 col-md-4">
+					<img src="./img/24-hours.svg" style="width: 14%" alt="">
+					<br>
+					<h3>Price Gurantee</h3>
+					<p>Best price deal with us</p>
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<img src="./img/wallet.svg" style="width: 13%" alt="">
+					<br>
+					<h3>24/7 Customer care</h3>
+					<p>24x7 support service provider</p>
+				</div>
 
+			</div>
 		</div>
 		<hr class="my-2">
 	</div>
@@ -294,21 +307,21 @@
 			<div class="row">
 
 				<!-- Grid column -->
-				<div class="col-8">
+				<div class="col-md-8 col-xs-12">
 					<ul class="py-3">
-						<li class="px-4">
+						<li class="px-2">
 							<a href="#">Home</a>
 						</li>
-						<li class="px-4">
+						<li class="px-2">
 							<a href="./privacy.html"> Privacy policy</a>
 						</li>
 
-						<li class="px-4">
-							<a href="./contact.html"> Support</a>
+						<li class="px-2">
+							<a href="./contact.html">Support</a>
 						</li>
 					</ul>
-					<div class="row container ml-4">
-						<p style="margin-right: 100px; margin-left: -12px;">Easy Air Travel and Tours is a family
+					<div class="ml-3">
+						<p>Easy Air Travel and Tours is a family
 							owned
 							and operated travel
 							agency located in Calgary. We have been serving the Canadian travel industry since 2017.
@@ -324,9 +337,9 @@
 
 
 				<!-- Grid column -->
-				<div class="col-4 mb-md-0 mb-3">
+				<div class="col-md-4 col-xs-12 mb-md-0 mb-3">
 					<div class="row">
-						<div class="card text-white  bg-info mb-3" style="max-width: 20rem;">
+						<div class="card text-white  bg-info mb-3">
 							<div class="card-header text-center">Support</div>
 							<div class="card-body">
 
@@ -373,6 +386,17 @@
 
 
 	<!-- Footer -->
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src="./js/bootstrap-datepicker.min.js"></script>
+	<script src="./js/bootstrap-datepicker.js"></script>
+	
+	<script src="./js/main.js"></script>
 
 
 </body>
